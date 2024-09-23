@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xzing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             x:Class="BingMaui.BarcodeGenerator"
+             Title="BarcodeGenerator">
+    <xzing:BarcodeGeneratorView
+        x:Name="barcodeGenerator"
+        Value="www.google.com"
+        Format="QrCode"
+        HeightRequest="100"
+        WidthRequest="100"/>
+    
+</ContentPage>
