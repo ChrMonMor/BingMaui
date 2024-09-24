@@ -64,12 +64,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="BarcodeGenerator.xaml">
+	  <MauiXaml Update="Views\BarcodeGenerator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="BarcodeReader.xaml">
+	  <MauiXaml Update="Views\BarcodeReader.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\ShakeDetector.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="controls\" />
 	</ItemGroup>
 
 </Project>

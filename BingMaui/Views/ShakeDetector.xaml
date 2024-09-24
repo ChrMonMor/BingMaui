@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BingMaui.Views.ShakeDetector"
+             Title="ShakeDetector"
+             >
+    <Label x:Name="ShakeLabel"
+           Text="Shake me for random color"
+           TextColor="Black">
+        <Label.Triggers>
+            <EventTrigger Event="ShakeDetected" 
+                          PropertyChanging="EventTrigger_PropertyChanging"/>
+        </Label.Triggers>
+    </Label>
+
+</ContentPage>

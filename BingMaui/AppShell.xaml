@@ -4,12 +4,25 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:BingMaui"
-    Shell.FlyoutBehavior="Disabled"
+    xmlns:views="clr-namespace:BingMaui.Views"
     Title="BingMaui">
-
-    <ShellContent
+    <ShellContent 
         Title="Home"
-        ContentTemplate="{DataTemplate local:BarcodeGenerator}"
-        Route="BarcodeGenerator" />
-
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <FlyoutItem Title="QR Reader"><!--NAVBAR-->
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:BarcodeReader}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="QR Generator">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:BarcodeGenerator}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Shake Detector">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:ShakeDetector}"/>
+        </Tab>
+    </FlyoutItem>
 </Shell>
