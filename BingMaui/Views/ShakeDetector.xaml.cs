@@ -2,14 +2,46 @@ namespace BingMaui.Views;
 
 public partial class ShakeDetector : ContentPage
 {
-	public ShakeDetector()
-	{
-		InitializeComponent();
-		
-	}
+    private int r;
+    private int g;
+    private int b;
+    public ShakeDetector() {
+        InitializeComponent();
+    }
 
-    private void EventTrigger_PropertyChanging(object sender, PropertyChangingEventArgs e) {
-        ShakeLabel.TextColor = new Color(Random.Shared.Next(256), Random.Shared.Next(256), Random.Shared.Next(256));
-        ShakeLabel.Text = $"Shake detected";
+    protected override void OnAppearing() {
+        base.OnAppearing();
+        Accelerometer.ShakeDetected += OnShakeDetected;
+        StartAccelerometer();
+    }
+
+    protected override void OnDisappearing() {
+        base.OnDisappearing();
+        Accelerometer.ShakeDetected -= OnShakeDetected;
+        StopAccelerometer();
+    }
+
+    private void OnShakeDetected(object sender, EventArgs e) {
+        // Randomly change background color
+        Random random = new Random();
+        ShakeGrid.BackgroundColor = Color.FromRgb(random.Next(256), random.Next(256), random.Next(256));
+    }
+
+    private void StartAccelerometer() {
+        try {
+            if (!Accelerometer.IsMonitoring)
+                Accelerometer.Start(SensorSpeed.Game); // Game speed for better shake detection 20ms
+        } catch (FeatureNotSupportedException) {
+            // Handle feature not supported on device
+        }
+    }
+
+    private void StopAccelerometer() {
+        try {
+            if (Accelerometer.IsMonitoring)
+                Accelerometer.Stop();
+        } catch (Exception ex) {
+            // Handle exception
+        }
     }
 }

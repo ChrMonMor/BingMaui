@@ -25,4 +25,9 @@
             <ShellContent ContentTemplate="{DataTemplate views:ShakeDetector}"/>
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="Barometer Detector">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:BarometerPage}"/>
+        </Tab>
+    </FlyoutItem>
 </Shell>

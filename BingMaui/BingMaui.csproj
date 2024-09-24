@@ -70,6 +70,9 @@
 	  <MauiXaml Update="Views\BarcodeReader.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\BarometerPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ShakeDetector.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -77,6 +80,12 @@
 
 	<ItemGroup>
 	  <Folder Include="controls\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\BarometerPage.xaml.cs">
+	    <DependentUpon>BarometerPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>
