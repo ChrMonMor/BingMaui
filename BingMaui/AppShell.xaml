@@ -30,4 +30,9 @@
             <ShellContent ContentTemplate="{DataTemplate views:BarometerPage}"/>
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="Gyroskop Plade">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:GyroskopPage}"/>
+        </Tab>
+    </FlyoutItem>
 </Shell>

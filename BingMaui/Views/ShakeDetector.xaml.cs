@@ -29,6 +29,8 @@ public partial class ShakeDetector : ContentPage
 
     private void StartAccelerometer() {
         try {
+            if (!Accelerometer.IsSupported)
+                return;
             if (!Accelerometer.IsMonitoring)
                 Accelerometer.Start(SensorSpeed.Game); // Game speed for better shake detection 20ms
         } catch (FeatureNotSupportedException) {

@@ -25,6 +25,9 @@ public partial class BarometerPage : ContentPage
 
     private void StartBarometer() {
         try {
+            if (!Barometer.IsSupported) {
+                return;
+            }
             if (!Barometer.IsMonitoring)
                 Barometer.Start(SensorSpeed.UI); // Game speed for better shake detection 20ms
         } catch (FeatureNotSupportedException) {
