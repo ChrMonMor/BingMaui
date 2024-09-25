@@ -2,9 +2,9 @@ using ZXing.Net.Maui;
 
 namespace BingMaui.Views;
 
-public partial class BarcodeReader : ContentPage
+public partial class BarcodeReaderPage : ContentPage
 {
-    public BarcodeReader()
+    public BarcodeReaderPage()
     {
         InitializeComponent();
         barcodeReader.Options = new BarcodeReaderOptions

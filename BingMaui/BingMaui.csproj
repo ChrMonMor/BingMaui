@@ -66,10 +66,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\BarcodeGenerator.xaml">
+	  <MauiXaml Update="Views\BarcodeGeneratorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\BarcodeReader.xaml">
+	  <MauiXaml Update="Views\BarcodeReaderPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\BarometerPage.xaml">
@@ -84,14 +84,23 @@
 	  <MauiXaml Update="Views\GyroscopePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ShakeDetector.xaml">
+	  <MauiXaml Update="Views\ShakeDetectorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\BarcodeGeneratorPage.xaml.cs">
+	    <DependentUpon>BarcodeGeneratorPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\BarcodeReaderPage.xaml.cs">
+	    <DependentUpon>BarcodeReaderPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\BarometerPage.xaml.cs">
 	    <DependentUpon>BarometerPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ShakeDetectorPage.xaml.cs">
+	    <DependentUpon>ShakeDetectorPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 

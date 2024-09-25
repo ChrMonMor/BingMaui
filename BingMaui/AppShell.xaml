@@ -12,17 +12,17 @@
         Route="MainPage" />
     <FlyoutItem Title="QR Reader"><!--NAVBAR-->
         <Tab>
-            <ShellContent ContentTemplate="{DataTemplate views:BarcodeReader}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:BarcodeReaderPage}"/>
         </Tab>
     </FlyoutItem>
     <FlyoutItem Title="QR Generator">
         <Tab>
-            <ShellContent ContentTemplate="{DataTemplate views:BarcodeGenerator}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:BarcodeGeneratorPage}"/>
         </Tab>
     </FlyoutItem>
     <FlyoutItem Title="Shake Detector">
         <Tab>
-            <ShellContent ContentTemplate="{DataTemplate views:ShakeDetector}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:ShakeDetectorPage}"/>
         </Tab>
     </FlyoutItem>
     <FlyoutItem Title="Barometer Detector">

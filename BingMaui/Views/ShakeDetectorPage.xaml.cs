@@ -1,11 +1,11 @@
 namespace BingMaui.Views;
 
-public partial class ShakeDetector : ContentPage
+public partial class ShakeDetectorPage : ContentPage
 {
     private int r;
     private int g;
     private int b;
-    public ShakeDetector() {
+    public ShakeDetectorPage() {
         InitializeComponent();
     }
 
