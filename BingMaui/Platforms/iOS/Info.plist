@@ -30,5 +30,10 @@
 	<string>Assets.xcassets/appicon.appiconset</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app uses barcode scanning to</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>TemporaryFullAccuracyUsageDescription</key>
+		<string>Fill in a reason why your app needs full accuracy</string>
+	</dict>
 </dict>
 </plist>

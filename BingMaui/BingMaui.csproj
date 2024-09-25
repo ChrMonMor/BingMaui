@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="7.1.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.90" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.90" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
@@ -74,7 +75,13 @@
 	  <MauiXaml Update="Views\BarometerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\GyroskopPage.xaml">
+	  <MauiXaml Update="Views\FlashlightPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\GeolocationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\GyroscopePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ShakeDetector.xaml">
@@ -86,6 +93,10 @@
 	  <Compile Update="Views\BarometerPage.xaml.cs">
 	    <DependentUpon>BarometerPage.xaml</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Services\" />
 	</ItemGroup>
 
 </Project>

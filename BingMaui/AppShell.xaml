@@ -32,7 +32,17 @@
     </FlyoutItem>
     <FlyoutItem Title="Gyroskop Plade">
         <Tab>
-            <ShellContent ContentTemplate="{DataTemplate views:GyroskopPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:GyroscopePage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Geolocate Page">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:GeolocationPage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Flashlight Page">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:FlashlightPage}"/>
         </Tab>
     </FlyoutItem>
 </Shell>
