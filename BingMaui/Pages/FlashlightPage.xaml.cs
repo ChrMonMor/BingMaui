@@ -1,6 +1,6 @@
 
 
-namespace BingMaui.Views;
+namespace BingMaui.Pages;
 
 public partial class FlashlightPage : ContentPage
 {

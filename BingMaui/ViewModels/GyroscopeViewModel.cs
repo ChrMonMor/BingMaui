@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BingMaui.Controllers {
-    internal class FlashlightController {
+namespace BingMaui.ViewModels {
+    internal class GyroscopeViewModel {
     }
 }

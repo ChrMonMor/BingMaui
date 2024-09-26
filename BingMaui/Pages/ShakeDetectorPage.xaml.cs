@@ -1,12 +1,15 @@
-namespace BingMaui.Views;
+using BingMaui.ViewModels;
+
+namespace BingMaui.Pages;
 
 public partial class ShakeDetectorPage : ContentPage
 {
     private int r;
     private int g;
     private int b;
-    public ShakeDetectorPage() {
+    public ShakeDetectorPage(ShakeDetectorViewModel vm) {
         InitializeComponent();
+        BindingContext = vm;
     }
 
     protected override void OnAppearing() {

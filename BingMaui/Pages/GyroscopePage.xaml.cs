@@ -1,7 +1,7 @@
 using Microsoft.Maui.Controls;
 using System;
 
-namespace BingMaui.Views {
+namespace BingMaui.Pages {
     public partial class GyroscopePage : ContentPage {
         double squareX = 0;
         double squareY = 0;

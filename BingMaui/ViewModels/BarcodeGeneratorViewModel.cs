@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BingMaui.Controllers {
-    internal class GyroscopeController {
+namespace BingMaui.ViewModels {
+    internal class BarcodeGeneratorViewModel {
     }
 }

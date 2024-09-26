@@ -1,6 +1,6 @@
 using ZXing.Net.Maui;
 
-namespace BingMaui.Views;
+namespace BingMaui.Pages;
 
 public partial class BarcodeReaderPage : ContentPage
 {

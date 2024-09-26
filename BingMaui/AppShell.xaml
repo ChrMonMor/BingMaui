@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:BingMaui"
-    xmlns:views="clr-namespace:BingMaui.Views"
+    xmlns:views="clr-namespace:BingMaui.Pages"
     Title="BingMaui">
     <ShellContent 
         Title="Home"
@@ -43,6 +43,16 @@
     <FlyoutItem Title="Flashlight Page">
         <Tab>
             <ShellContent ContentTemplate="{DataTemplate views:FlashlightPage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Compass Page">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:CompassPage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Magnetometer Page">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:MagnetometerPage}"/>
         </Tab>
     </FlyoutItem>
 </Shell>
