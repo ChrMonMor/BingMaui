@@ -4,14 +4,11 @@ namespace BingMaui.Pages;
 
 public partial class ShakeDetectorPage : ContentPage
 {
-    private int r;
-    private int g;
-    private int b;
     public ShakeDetectorPage(ShakeDetectorViewModel vm) {
         InitializeComponent();
         BindingContext = vm;
     }
-
+    /*
     protected override void OnAppearing() {
         base.OnAppearing();
         Accelerometer.ShakeDetected += OnShakeDetected;
@@ -49,4 +46,5 @@ public partial class ShakeDetectorPage : ContentPage
             // Handle exception
         }
     }
+    */
 }

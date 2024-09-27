@@ -4,12 +4,9 @@
              xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui" 
              x:Class="BingMaui.Pages.ShakeDetectorPage"
              Title="ShakeDetectorPage">
-    <ContentPage.BindingContext>
-        <toolkit:EventToCommandBehavior Command="{Binding OnShakeDetected}"
-                                        EventName="ShakeDetected"/>
-    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid x:Name="ShakeGrid">
+        <Grid x:Name="ShakeGrid"
+              BackgroundColor="{Binding RandomColor}">
             <Label Text="Shake the device to change background color!"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"

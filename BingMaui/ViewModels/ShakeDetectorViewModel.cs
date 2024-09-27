@@ -11,10 +11,10 @@ namespace BingMaui.ViewModels {
 
         public ShakeDetectorViewModel() {
             StartAccelerometer();
+            RandomColor = Color.FromRgb(0, 0, 0);
         }
 
-        [RelayCommand]
-        public async Task OnShakeDetected() {
+        public void OnShakeDetected() {
             Random random = new Random();
             RandomColor = Color.FromRgb(random.Next(256), random.Next(256), random.Next(256));
         }
@@ -25,15 +25,22 @@ namespace BingMaui.ViewModels {
                     return;
                 if (!Accelerometer.IsMonitoring)
                     Accelerometer.Start(SensorSpeed.Game); // Game speed for better shake detection 20ms
+                Accelerometer.ShakeDetected += Accelerometer_ShakeDetected; 
+
             } catch (FeatureNotSupportedException) {
-                // Handle feature not supported on device
+                StopAccelerometer();
             }
+        }
+
+        private void Accelerometer_ShakeDetected(object? sender, EventArgs e) {
+            OnShakeDetected();
         }
 
         private void StopAccelerometer() {
             try {
                 if (Accelerometer.IsMonitoring)
                     Accelerometer.Stop();
+                Accelerometer.ShakeDetected -= Accelerometer_ShakeDetected;
             } catch (Exception ex) {
                 // Handle exception
             }
