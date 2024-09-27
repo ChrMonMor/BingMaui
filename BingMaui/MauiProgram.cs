@@ -25,9 +25,11 @@ namespace BingMaui {
 
             builder.Services.AddSingleton<ShakeDetectorPage>();
             builder.Services.AddSingleton<ShakeDetectorViewModel>();
+            builder.Services.AddSingleton<MagnetometerPage>();
+            builder.Services.AddSingleton<MagnetometerViewModel>();
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

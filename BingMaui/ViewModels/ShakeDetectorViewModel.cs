@@ -8,15 +8,21 @@ namespace BingMaui.ViewModels {
 
         [ObservableProperty]
         Color _randomColor;
+        [ObservableProperty]
+        bool _isBusy;
 
         public ShakeDetectorViewModel() {
             StartAccelerometer();
             RandomColor = Color.FromRgb(0, 0, 0);
+            IsBusy = false;
         }
 
         public void OnShakeDetected() {
             Random random = new Random();
             RandomColor = Color.FromRgb(random.Next(256), random.Next(256), random.Next(256));
+        }
+        private void Accelerometer_ShakeDetected(object? sender, EventArgs e) {
+            OnShakeDetected();
         }
 
         private void StartAccelerometer() {
@@ -32,9 +38,6 @@ namespace BingMaui.ViewModels {
             }
         }
 
-        private void Accelerometer_ShakeDetected(object? sender, EventArgs e) {
-            OnShakeDetected();
-        }
 
         private void StopAccelerometer() {
             try {

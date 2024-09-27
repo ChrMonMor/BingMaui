@@ -1,13 +1,16 @@
+using BingMaui.ViewModels;
+
 namespace BingMaui.Pages;
 
 public partial class MagnetometerPage : ContentPage
 {
-	public MagnetometerPage()
+    public MagnetometerPage(MagnetometerViewModel vm)
 	{
 		InitializeComponent();
-        ToggleMagnetometer();
+        BindingContext = vm;
 
     }
+    /*
     private void ToggleMagnetometer() {
         if (Magnetometer.Default.IsSupported) {
             if (!Magnetometer.Default.IsMonitoring) {
@@ -30,5 +33,5 @@ public partial class MagnetometerPage : ContentPage
         MagnetometerLabel.TextColor = Colors.Green;
         MagnetometerLabel.Text = $"Magnetometer: \nX: {e.Reading.MagneticField.X}\nY: {e.Reading.MagneticField.Y}\nZ: {e.Reading.MagneticField.Z}";
         var s = e.Reading.MagneticField;
-    }
+    } */
 }

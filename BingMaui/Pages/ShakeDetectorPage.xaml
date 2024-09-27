@@ -11,6 +11,7 @@
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    FontSize="24"/>
+            <ActivityIndicator IsRunning="{Binding IsBusy}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

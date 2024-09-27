@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui" 
              x:Class="BingMaui.Pages.MagnetometerPage"
              Title="MagnetometerPage">
     <VerticalStackLayout>
-        <Label x:Name="hasItLabel"/>
+        <Label x:Name="hasItLabel"
+               Text="{Binding HasItLabel}"/>
         <Label x:Name="MagnetometerLabel"
                FontSize="24"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+               Text="{Binding MagnetometerLabel}"/>
     </VerticalStackLayout>
 </ContentPage>
